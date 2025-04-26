@@ -375,6 +375,51 @@ img {
   background-color: var(--dark-color);
 }
 
+/* ===== PROJECT-CARD GRID ===== */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* 3D card wrapper */
+.project-card {
+  perspective: 1000px;
+}
+
+.project-card__inner {
+  background: var(--dark-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.project-card__inner img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-card__inner h3 {
+  margin: 0.5rem 0;
+  color: var(--white-color);
+}
+
+.project-card__inner p {
+  font-size: var(--normal-font-size);
+  color: var(--white-color);
+  margin-bottom: 1rem;
+}
+
+.project-card__inner a {
+  color: var(--first-color);
+  font-weight: 600;
+}
+
 .contact-section {
   background-color: var(--dark-color);
 }
@@ -467,5 +512,17 @@ img {
   .resume-skills,
   .resume-download {
     flex: 1 1 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projects-container {
+    grid-template-columns: 1fr;
   }
 }

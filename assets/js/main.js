@@ -108,10 +108,34 @@ sr.reveal(".resume-download", {
   delay: 200,
 });
 
-// FADE OUT LOADER
+/*Projects Section*/
+sr.reveal(".project-card", {
+  origin: "bottom",
+  distance: "50px",
+  interval: 200, 
+  easing: "ease-in-out",
+  reset: true     
+});
+
+/*====== FADE OUT LOADER ======*/
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
     loader.classList.add("hidden");
     setTimeout(() => loader.remove(), 1000);
   });
   
+/*====== 3D TILT FOR PROJECT SECTION CARDS ======*/
+document.querySelectorAll('.project-card').forEach(card => {
+  const inner = card.querySelector('.project-card__inner');
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const rotateY = ((x / rect.width) - 0.5) * 20;   // ±10°
+    const rotateX = ((y / rect.height) - 0.5) * -20; // ±10°
+    inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    inner.style.transform = 'rotateX(0) rotateY(0)';
+  });
+});
