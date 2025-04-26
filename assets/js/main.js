@@ -24,21 +24,21 @@ var rellax = new Rellax(".parallax");
 /*Navbar*/
 gsap.from(".nav__logo", {
   opacity: 0,
-  duration: 3,
+  duration: 1,
   delay: 0.5,
   y: 30,
   ease: "expo.out",
 });
 gsap.from(".nav__toggle", {
   opacity: 0,
-  duration: 3,
+  duration: 1,
   delay: 0.7,
   y: 30,
   ease: "expo.out",
 });
 gsap.from(".nav__item", {
   opacity: 0,
-  duration: 3,
+  duration: 1,
   delay: 0.7,
   y: 35,
   ease: "expo.out",
@@ -48,14 +48,14 @@ gsap.from(".nav__item", {
 /*Text*/
 gsap.from(".home__title", {
   opacity: 0,
-  duration: 3,
+  duration: 1,
   delay: 1.3,
   y: 35,
   ease: "expo.out",
 });
 gsap.from(".home__subtitle", {
   opacity: 0,
-  duration: 3,
+  duration: 1,
   delay: 1.1,
   y: 35,
   ease: "expo.out",
@@ -64,12 +64,12 @@ gsap.from(".home__subtitle", {
 /*Scroll*/
 gsap.from(".home__scroll", {
   opacity: 0,
-  duration: 3,
+  duration: 1,
   delay: 1.5,
   y: 25,
   ease: "expo.out",
 });
-gsap.delayedCall(2, () => {
+gsap.delayedCall(1.7, () => {
   document.querySelector(".home__title .highlight").classList.add("active");
 });
 
@@ -96,7 +96,7 @@ sr.reveal(".resume-skills", {
     });
     gsap.to(fills, {
       width: (i) => fills[i].dataset.level,
-      duration: 3,
+      duration: 1,
       ease: "bounce.out",
       stagger: 0.2,
     });
@@ -108,12 +108,10 @@ sr.reveal(".resume-download", {
   delay: 200,
 });
 
-// FADE OUT LOADER WHEN EVERYTHING IS READY
+// FADE OUT LOADER
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
-    // trigger CSS fade
     loader.classList.add("hidden");
-    // remove the element after the fade completes (0.5s)
     setTimeout(() => loader.remove(), 1000);
   });
   
