@@ -540,6 +540,12 @@ img {
   .resume-download {
     flex: 1 1 100%;
   }
+  .section {
+    height: auto !important;
+    min-height: 100vh;
+    padding: 3rem 1rem;
+  
+  }
 }
 
 @media screen and (max-width: 1024px) {
