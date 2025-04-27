@@ -27,7 +27,6 @@
   }
 }
 
-/* will be added via JS to fade & hide the loader */
 #loader.hidden {
   opacity: 0;
   visibility: hidden;
@@ -280,7 +279,6 @@ img {
   color: var(--white-color);
 }
 
-/* ========== JEDI HIGHLIGHT COLOR-WIPE========== */
 .home__title .highlight {
   display: inline-block;
   margin-inline: 0.225em;
@@ -375,7 +373,6 @@ img {
   background-color: var(--dark-color);
 }
 
-/* ===== PROJECT-CARD GRID ===== */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -383,7 +380,6 @@ img {
   margin-top: 2rem;
 }
 
-/* 3D card wrapper */
 .project-card {
   perspective: 1000px;
 }
@@ -422,6 +418,37 @@ img {
 
 .contact-section {
   background-color: var(--dark-color);
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--white-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-item i {
+  font-size: 3rem;
+  color: var(--first-color);
+  transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+  color: var(--first-color);
+  transform: translateX(5px);
+}
+
+.contact-item:hover i {
+  transform: scale(1.1);
 }
 
 .section {
@@ -524,5 +551,12 @@ img {
 @media screen and (max-width: 600px) {
   .projects-container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-list {
+    align-items: center;
+    text-align: center;
   }
 }
