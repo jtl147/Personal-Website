@@ -1,6 +1,21 @@
 # Jedi Lee – Personal Portfolio
 
-Welcome to my personal website! This is a single-page, fully responsive portfolio built with modern web technologies and a bunch of custom animations.
+Welcome to my portfolio!
+This single-page, mobile-first website showcases my work as a web developer and designer. Built with HTML5, CSS3 (Flexbox & Grid), and modern JavaScript (ES6+), it features:
+
+A parallax hero powered by Rellax.js
+
+GSAP-driven entrance & scroll animations
+
+ScrollReveal.js for cascading section reveals
+
+Animated skill bars with bounce effects
+
+A 3-column, 3D-tilt project gallery
+
+A sleek page loader and downloadable résumé
+
+Everything is fully responsive, accessible, and optimized for a smooth, interactive experience.
 
 ---
 
