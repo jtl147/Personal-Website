@@ -1,3 +1,15 @@
+// *==== ENSURE TOP‐OF‐PAGE ON LOAD ====*/
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+function resetScroll() {
+  window.scrollTo(0, 0);
+}
+window.addEventListener("pageshow", resetScroll);
+window.addEventListener("beforeunload", resetScroll);
+
+
 /*====== MENU =====*/
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
